@@ -48,7 +48,7 @@ const Dashboard = () => {
         </div>
         {/* Card 2 */}
         <div className="">
-          <h2 className="md:text-end text-gray-600 font-semibold mb-4 hover:text-blue-950 duration-300"><Link to={'/'}>See All</Link></h2>
+          <h2 className="md:text-end text-gray-600 font-semibold mb-4 hover:text-blue-800 duration-300"><Link to={'/'}>See All</Link></h2>
           <div className="bg-white rounded-2xl h-[210px] shadow w-full lg:max-w-sm group transition transform duration-300 hover:scale-105 hover:shadow-lg">
             <div className="px-6 pt-4">
               <div className="flex items-center justify-between">
