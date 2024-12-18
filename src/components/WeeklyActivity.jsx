@@ -59,7 +59,7 @@ export default function WeeklyActivity() {
   return (
     <div className="col-span-2 w-full">
         <h3 className="text-gray-600 font-semibold mb-4">Weekly Activity</h3>
-        <div className="bg-white p-6 rounded-2xl shadow w-full">
+        <div className="bg-white md:p-6 p-3 rounded-2xl shadow w-full">
             {/* <h3 className="font-bold mb-"></h3> */}
             <Bar data={barData} options={barOptions} className='w-full'/>
         </div>

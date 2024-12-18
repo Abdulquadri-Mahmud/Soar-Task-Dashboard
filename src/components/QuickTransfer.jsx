@@ -55,7 +55,7 @@ export default function QuickTransfer() {
       <h3 className="text-gray-600 font-semibold mb-4">Quick Transfer</h3>
       <div className="bg-white relative px-6 py-10 rounded-2xl shadow-md">
         {/* Users */}
-        <div className="max-w-[80%]">
+        <div className="md:max-w-[80%] max-w-full">
           <Swiper ref={swiperRef} modules={[Navigation]} spaceBetween={10} slidesPerView={3} className="relative">
             {users.map((user, index) => (
               <SwiperSlide key={user.id}>

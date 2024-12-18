@@ -87,7 +87,7 @@ export default function BalanceHistory() {
   return (
     <div className="md:w-[65%] w-full">
       <h3 className="text-gray-600 font-semibold mb-4">Balance History</h3>
-      <div className="bg-white px-6 py-6 rounded-2xl shadow-md w-full h-[260px]">
+      <div className="bg-white md:px-6 p-3 md:py-6 p-3 rounded-2xl shadow-md w-full h-[260px]">
         {/* Line Chart */}
         <Line ref={chartRef} data={createChartData()} options={options} />
       </div>

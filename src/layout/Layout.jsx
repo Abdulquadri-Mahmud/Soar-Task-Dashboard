@@ -112,7 +112,7 @@ export default function Layout() {
         <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
         <div className="overflow-x-hidden h-[100vh] flex-1 overflow-y-auto bg-gray-50 text-black">
           <Header toggleSidebar={toggleSidebar} />
-          <div className="p-4">
+          <div className="md:p-4 p-2">
             <Outlet />
           </div>
         </div>

@@ -11,7 +11,7 @@ const Dashboard = () => {
   return (
     <div className="min-h-screen ">
       {/* Header Section */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 mb-6 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 mb-6 gap-6">
         {/* Card 1 */}
         <div className="">
           <h2 className="text-gray-600 font-semibold mb-4">My Cards</h2>
