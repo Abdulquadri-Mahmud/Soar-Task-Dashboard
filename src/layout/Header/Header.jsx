@@ -71,8 +71,8 @@ export default function Header ({ toggleSidebar }) {
         </div>
       </div>
       {/* Search Bar */}
-      <div className="relative block lg:hidden w-full max-w-sm mx-auto pb-3">
-        <div className="flex items-center bg-gray-100 rounded-full px-3 py-1">
+      <div className="relative block lg:hidden pb-3">
+        <div className="flex items-center bg-gray-200 max-w-[90%] mx-auto rounded-full px-3 py-1">
           <FiSearch className="text-gray-500" />
           <input type="text" placeholder="Search for something" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="w-full bg-transparent placeholder:text-sm placeholder:text-blue-950 placeholder:font-medium placeholder:opacity-25 focus:outline-none px-2 py-1"/>
         </div>

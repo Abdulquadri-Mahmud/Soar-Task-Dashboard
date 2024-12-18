@@ -112,50 +112,26 @@ const EditProfileForm = () => {
       <div className="mt-6 grid md:grid-cols-2 grid-cols-1 gap-4 lg:flex-1 w-full">
         <div>
           <label className="block text-gray-700 mb-1">Your Name</label>
-          <input
-            type="text"
-            placeholder="Charlene Reed"
-            value={name}
-            onChange={(e) => setName(e.target.value)} // onChange to update the state
-            className="w-full border border-gray-300 rounded-md p-2"
-          />
+          <input type="text" placeholder="Charlene Reed" value={name} onChange={(e) => setName(e.target.value)} className="w-full border border-gray-300 rounded-md p-2"/>
         </div>
         <div>
           <label className="block text-gray-700 mb-1">User Name</label>
-          <input
-            type="text"
-            placeholder="Charlene Reed"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)} // onChange to update the state
-            className="w-full border border-gray-300 rounded-md p-2"
-          />
+          <input type="text" placeholder="Charlene Reed" value={username} onChange={(e) => setUsername(e.target.value)} className="w-full border border-gray-300 rounded-md p-2"/>
         </div>
         <div>
           <label className="block text-gray-700 mb-1">Email</label>
-          <input
-            type="email"
-            placeholder="charlenereed@gmail.com"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)} // onChange to update the state
-            className="w-full border border-gray-300 rounded-md p-2"
-          />
+          <input type="email" placeholder="charlenereed@gmail.com" value={email} onChange={(e) => setEmail(e.target.value)} className="w-full border border-gray-300 rounded-md p-2"/>
         </div>
         <div>
           <label className="block text-gray-700 mb-1">Password</label>
-          <input
-            type="password"
-            placeholder="********"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)} // onChange to update the state
-            className="w-full border border-gray-300 rounded-md p-2"
-          />
+          <input type="password" placeholder="********" value={password} onChange={(e) => setPassword(e.target.value)} className="w-full border border-gray-300 rounded-md p-2"/>
         </div>
         <div className="w-full">
           <label className="block text-gray-700 mb-1">Date of Birth</label>
           <DatePicker selected={dob} onChange={(date) => setDob(date)} // onChange to update the dob state
             dateFormat="MMMM d yyyy"
-            className="border rounded-lg px-2 text-sm font-medium py-2 outline-none w-[300px]"
-            calendarClassName="bg-white absolute right-0 border border-gray-300 rounded-lg shadow-lg p-4"
+            className="border rounded-md px-2 text-sm font-medium py-2 outline-none md:w-[300px] w-[83vw]"
+            calendarClassName="bg-white absolute right-0 border border-gray-300 rounded-md shadow-lg p-4"
             dayClassName={(date) =>
               "text-center p-2 rounded-full hover:bg-indigo-100 transition ease-in-out w-full"
             }
