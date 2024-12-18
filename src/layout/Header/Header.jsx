@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FiBell, FiSearch, FiSettings } from "react-icons/fi";
+import { LuMenu } from "react-icons/lu";
 import { Link, useLocation } from "react-router-dom";
 
 
@@ -21,7 +22,7 @@ export default function Header ({ toggleSidebar }) {
       <div className="flex items-center justify-between px-6 py-4">
         {/* Dynamic Page Title */}
         <button onClick={toggleSidebar} className="text-2xl p-2 text-slate-900 lg:hidden focus:outline-none" aria-label="Open Sidebar">
-            ☰
+          <LuMenu/>
         </button>
         <h2 className="text-[1.4em] font-medium text-blue-950 capitalize">
           {routeTitle}

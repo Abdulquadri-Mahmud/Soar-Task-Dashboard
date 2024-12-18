@@ -34,10 +34,10 @@ export default function ExpensesStatistics() {
     labels: ["Bill Expense", "Others", "Investment", "Entertainment"],
     datasets: [
       {
-        data: [15, 35, 20, 30], // Data percentages
+        data: [25, 35, 20, 30], // Data percentages
         backgroundColor: ["#1F2937", "#0e0d0d", "#60A5FA", "#F97316"], // Slice colors
         borderColor: "#ffffff", // White border between slices
-        borderWidth: 4, // Border thickness
+        borderWidth: 3, // Border thickness
       },
     ],
   };
@@ -87,7 +87,7 @@ export default function ExpensesStatistics() {
   return (
     <div className="w-full mt-6 md:mt-0">
       <h3 className="text-gray-600 font-semibold mb-4">Expense Statistics</h3>
-      <div className="bg-white px-6 md:py-10 py-6 rounded-2xl shadow w-full">
+      <div className="bg-white px-4 md:py-10 py-6 rounded-2xl shadow w-full">
         <div className="relative w-full flex justify-center">
           {/* Add padding inside the chart area */}
           <Pie data={pieData} options={pieOptions} className="w-full" />

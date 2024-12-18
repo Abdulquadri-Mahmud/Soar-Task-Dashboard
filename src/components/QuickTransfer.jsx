@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules"; // For navigation arrows
 import "swiper/css";
@@ -16,6 +16,18 @@ export default function QuickTransfer() {
   ];
 
   const swiperRef = useRef(null);
+
+  // State for modal visibility
+  const [isModalVisible, setModalVisible] = useState(false);
+
+  // Function to handle send button click
+  const handleSendClick = () => {
+    setModalVisible(true);
+    // Automatically close the modal after 3 seconds
+    setTimeout(() => {
+      setModalVisible(false);
+    }, 3000);
+  };
 
   useEffect(() => {
     if (swiperRef.current?.swiper) {
@@ -48,7 +60,7 @@ export default function QuickTransfer() {
             {users.map((user, index) => (
               <SwiperSlide key={user.id}>
                 <div className="flex flex-col items-center">
-                  <img src={user.img} alt={user.name} className="w-14 h-14 rounded-full object-cover mb-1"/>
+                  <img src={user.img} alt={user.name} className="w-14 h-14 rounded-full object-cover mb-1" />
                   <p className={`text-sm pb-1 ${index === 0 ? "font-bold" : "font-medium"}`}>
                     {user.name}
                   </p>
@@ -67,19 +79,30 @@ export default function QuickTransfer() {
         {/* Amount Input and Send Button */}
         <div className="flex items-center gap-4 mt-10">
           <p className="text-blue-950 text-sm">Write amount</p>
-          <div className="flex -space-x-6">
-            <input
-              type="text"
-              placeholder="$525.50"
-              className="px-4 py-2 border border-zinc-20 bg-zinc-200 rounded-l-full w-[100%] border2 placeholder:text-sm place
-              rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue- placeholder:text-blue-900"
-            />
-            <button className="bg-black rounded-full text-white px-4 w-[120px] py-2 font-medium flex items-center gap-2 hover:bg-gray-800">
+          <div className="flex -space-x-4">
+            <input type="text" placeholder="$525.50" className="px-4 py-2 border border-zinc-20 bg-zinc-200 rounded-l-full w-[100%] border2 placeholder:text-sm place
+              rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue- placeholder:text-blue-900"/>
+            <button onClick={handleSendClick}
+              className="bg-black rounded-full text-white px-4 w-[120px] py-2 font-medium flex items-center gap-2 hover:bg-gray-800">
               Send <FiSend />
             </button>
           </div>
         </div>
       </div>
+
+      {/* Modal */}
+      {isModalVisible && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-20">
+          <div className="bg-white rounded-lg shadow-lg p-6 text-center">
+            <h2 className="text-xl font-semibold text-green-600">Success!</h2>
+            <p className="text-gray-700 mt-2">The amount has been sent successfully.</p>
+            <button onClick={() => setModalVisible(false)}
+              className="mt-4 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-black transition-all">
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

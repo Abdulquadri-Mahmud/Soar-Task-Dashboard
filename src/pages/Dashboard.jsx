@@ -15,23 +15,23 @@ const Dashboard = () => {
         {/* Card 1 */}
         <div className="">
           <h2 className="text-gray-600 font-semibold mb-4">My Cards</h2>
-          <div className="bg-gradient-to-br from-zinc-600 to-zinc-950  text-white rounded-2xl h-[200px] w-full lg:max-w-sm">
+          <div className="bg-gradient-to-br from-zinc-600 to-zinc-950 text-white rounded-2xl h-[200px] w-full lg:max-w-sm group transition transform duration-300 hover:scale-105 hover:shadow-lg">
             <div className="px-6 pt-4">
               <div className="flex items-center justify-between">
-                <div className="">
+                <div>
                   <p className="text-sm text-gray-300 font-semibold">Balance</p>
                   <p className="text-2xl font-medium">$5,756</p>
                 </div>
-                <div className="">
-                  <img src="/card_chip2.png" alt="card-chip" className='max-w-10 '/>
+                <div>
+                  <img src="/card_chip2.png" alt="card-chip" className="max-w-10" />
                 </div>
               </div>
               <div className="my-4 flex items-center justify-between max-w-[80%]">
-                <div className="">
+                <div>
                   <p className="text-sm font-medium text-gray-400">CARD HOLDER</p>
-                  <p className='font-medium'>Eddy Cusuma</p>
+                  <p className="font-medium">Eddy Cusuma</p>
                 </div>
-                <div className="">
+                <div>
                   <p className="mt-2 text-sm font-medium text-gray-400">VALID THRU</p>
                   <p className="font-medium">12/22</p>
                 </div>
@@ -48,24 +48,24 @@ const Dashboard = () => {
         </div>
         {/* Card 2 */}
         <div className="">
-          <h2 className="md:text-end text-gray-600 font-semibold mb-4"><Link to={'/'}>See All</Link></h2>
-          <div className="bg-white rounded-2xl h-[210px] shadow w-full lg:max-w-sm">
+          <h2 className="md:text-end text-gray-600 font-semibold mb-4 hover:text-blue-950 duration-300"><Link to={'/'}>See All</Link></h2>
+          <div className="bg-white rounded-2xl h-[210px] shadow w-full lg:max-w-sm group transition transform duration-300 hover:scale-105 hover:shadow-lg">
             <div className="px-6 pt-4">
               <div className="flex items-center justify-between">
-                <div className="">
+                <div>
                   <p className="text-sm text-gray-300 font-semibold">Balance</p>
                   <p className="text-2xl font-medium">$5,756</p>
                 </div>
-                <div className="">
-                  <img src="/card_chip1.png" alt="card-chip" className='max-w-10 '/>
+                <div>
+                  <img src="/card_chip1.png" alt="card-chip" className="max-w-10" />
                 </div>
               </div>
               <div className="my-4 flex items-center justify-between max-w-[80%]">
-                <div className="">
+                <div>
                   <p className="text-sm font-medium text-gray-400">CARD HOLDER</p>
-                  <p className='font-medium'>Eddy Cusuma</p>
+                  <p className="font-medium">Eddy Cusuma</p>
                 </div>
-                <div className="">
+                <div>
                   <p className="mt-2 text-sm font-medium text-gray-400">VALID THRU</p>
                   <p className="font-medium">12/22</p>
                 </div>
@@ -83,7 +83,7 @@ const Dashboard = () => {
         {/* Recent Transactions */}
         <div className="">
           <h2 className={'text-gray-600 font-semibold mb-4'}>Recent Transaction</h2>
-          <div className="bg-white p-6 rounded-2xl shadow">
+          <div className="bg-white p-6 rounded-2xl shadow group transition transform duration-300 hover:scale-105 hover:shadow-lg">
             <ul className="space-y-4 text-gray-700">
 
               {/* Deposit from my Card */}
